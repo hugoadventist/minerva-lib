@@ -8,6 +8,15 @@
 "features": {
 	"ghcr.io/warrenbuckley/codespace-features/sqlite:1": {},
 	"ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {},
-	"ghcr.io/devcontainers-extra/features/zsh-plugins:0": {}
+	"ghcr.io/devcontainers-extra/features/zsh-plugins:0": {},
+	"ghcr.io/devcontainers/features/github-cli:1": {}
+},
+"customizations": {
+	"vscode": {
+		"extensions": [
+			"alexcvzz.vscode-sqlite",
+			"qwtel.sqlite-viewer"
+		]
+	}
 }
 }
