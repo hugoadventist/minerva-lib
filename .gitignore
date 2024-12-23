@@ -1,0 +1,50 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs
+*.log
+logs/
+
+# Diretórios do Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de Ambiente de Desenvolvimento
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Diretórios de Build
+dist/
+build/
+tmp/
+
+# Arquivos de Backup do Editor
+*.swp
+*.swo
+
+# Outros Arquivos Temporários
+*.bak
+*.tmp
+*.temp
+*.old
+*.swp
+
+# Cobertura de Testes
+coverage/
+*.lcov
+
+# Configurações do Editor
+.vscode/
+.idea/
+
+# Arquivos de Configuração
+config/local.js
+config/local.json
+diagrama_de_classes.puml

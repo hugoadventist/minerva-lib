@@ -1,0 +1,13 @@
+// See https://containers.dev/implementors/json_reference/ for configuration reference
+{
+	"name": "Untitled Node.js project",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+"remoteUser": "node",
+"features": {
+	"ghcr.io/warrenbuckley/codespace-features/sqlite:1": {},
+	"ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {},
+	"ghcr.io/devcontainers-extra/features/zsh-plugins:0": {}
+}
+}
