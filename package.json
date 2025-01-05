@@ -1,0 +1,20 @@
+{
+  "name": "firstchallenge",
+  "version": "1.0.0",
+  "description": "sistema de gerenciamento de livraria",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "dev": "node /workspaces/firstChallenge/src/models/repositories/classes.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

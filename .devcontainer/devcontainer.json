@@ -15,7 +15,9 @@
 	"vscode": {
 		"extensions": [
 			"alexcvzz.vscode-sqlite",
-			"qwtel.sqlite-viewer"
+			"qwtel.sqlite-viewer",
+			"inferrinizzard.prettier-sql-vscode",
+			"ms-azuretools.vscode-docker"
 		]
 	}
 }
