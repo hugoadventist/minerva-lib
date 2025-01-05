@@ -22,12 +22,7 @@ function tentar(){
         \t7 - Para sair.`);
         rl.on('line', (input) => {
             const entrada = input.trim(); // Remover espaços em branco extras
-            if (entrada.toLowerCase() === '7') {
-                console.log('Saindo...');
-                rl.close(); // Fechar a interface readline
-            } if (entrada.toLowerCase() === '1') {
-                console.log(`Você digitou: ${entrada}`);
-                ; // registrar novo livro
+            const arrayOpcoes = {
             }
         });
 
