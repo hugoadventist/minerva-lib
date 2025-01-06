@@ -15,6 +15,10 @@ export default class ILivraria {
         throw new Error("Método 'listarPedidos()' deve ser implementado.");
     }
 
+    listarClientes() {
+        throw new Error("Método 'listarClientes()' deve ser implementado.");
+    }
+
 
 
 }

@@ -20,6 +20,16 @@ export class Ebook extends Livro {
 
     }
 
+
+    verificarFormato() {
+        const FORMATOS = ['EPUB', 'PDF'];
+        if (this.formato == FORMATOS.find(this.formato)) {
+            return this.formato;
+        } else {
+            console.log("Opção de formato inválida, favor escolher a opção correta!");
+
+        }
+        }
     
     exibirDetalhes () {
         return `${super.exibirDetalhes()}
