@@ -1,8 +1,8 @@
 export default class Cliente {
 
     constructor(nome, email) {
-        this.nome = nome;
-        this.email = email;
+        this._nome = nome;
+        this._email = email;
         
     }
 }

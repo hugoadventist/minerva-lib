@@ -6,29 +6,46 @@ import Pedido from "./Pedido.js";
 export default class Livraria extends ILivraria {
     constructor() {
         super();
-        this._livrosDisponiveis = [];
-        this._clientes = [];
-        this._pedidos = [];
+        this.livrosDisponiveis = [];
+        this.clientes = [];
+        this.pedidos = [];
     }
 
     adicionarLivro(titulo, autor, preco) {
         const novoLivro = new Livro(titulo, autor, preco);
-        this._livrosDisponiveis.push(novoLivro);
+        this.livrosDisponiveis.push(novoLivro);
+        console.log(`Livro: ${novoLivro.titulo} adicionado à livraria.`);
 
     }
 
     registrarCliente(nome, email) {
         const novoCliente = new Cliente(nome, email);
-        this._clientes.push(novoCliente);
+        this.clientes.push(novoCliente);
+        console.log(`Cliente ${novoCliente.nome} registrado com sucesso!`);
 
     }
 
-    fazerPedido(nome, livros) {
-        const novoPedido = new Pedido(nome, livros);
-        this._pedidos.push(novoPedido);
+    fazerPedido(cliente, livros) {
+        const novoPedido = new Pedido(cliente);
+        for (let livro in livros) {
+            if (this.livrosDisponiveis.includes(livro)) {
+                novoPedido.adicionarLivro(livro);
+            } else {
+                throw new Error("Opção de livro inválida!");
+            }
+        }
+        this.pedidos.push(novoPedido);
 
     }
-    listarClientes() {
-        return this._clientes;
+    getClientes() {
+        return this.clientes;
+    }
+
+    getLivrosDisponiveis() {
+        return this.livrosDisponiveis;
+    }
+    
+    getPedidos() {
+        return this.pedidos;
     }
 }

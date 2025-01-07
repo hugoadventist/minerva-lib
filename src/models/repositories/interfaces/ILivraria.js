@@ -11,12 +11,12 @@ export default class ILivraria {
         throw new Error("Método 'fazerPedido()' dever ser implementado.");
     }
 
-    listarPedidos() {
-        throw new Error("Método 'listarPedidos()' deve ser implementado.");
+    getPedidos() {
+        throw new Error("Método 'getPedidos()' deve ser implementado.");
     }
 
-    listarClientes() {
-        throw new Error("Método 'listarClientes()' deve ser implementado.");
+    getClientes() {
+        throw new Error("Método 'getClientes()' deve ser implementado.");
     }
 
 

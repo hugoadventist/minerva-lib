@@ -30,20 +30,23 @@ function tentar(){
 
 function main() {
     const novaLivraria = new Livraria();
-    console.log(novaLivraria.adicionarLivro('O mulo'));
-    console.log(novaLivraria.registrarCliente('Seu zé'));
-    novaLivraria.fazerPedido('1 livro desse');
+    console.log(novaLivraria.adicionarLivro('um titulo','um autor', 2));
+    console.log(novaLivraria.registrarCliente('seu zé','seuze@couldmail.com'));
+    console.log(novaLivraria.livrosDisponiveis);
+    novaLivraria.fazerPedido('seu zé','um titulo');
+    console.log(novaLivraria.getLivrosDisponiveis());
     const novoPedido = new Pedido();
-    novoPedido.adicionarLivro('esse outro');
+    novoPedido.adicionarLivro('um titulo');
     novoPedido.calcularTotal();
-
+    console.log(novoPedido.cliente);
+/*
     const novoLivro = new Ebook('hoje','eu', 1,'ebook');
     console.log(`saída do novoLivro \n \r${novoLivro.exibirDetalhes()}`);
 
     console.log('\nLivros disponíveis\n');
 
     console.log(novaLivraria.livrosDisponiveis);
-
+*/
 
     console.log('Programa executado com sucesso!!')
 
