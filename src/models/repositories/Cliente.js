@@ -5,4 +5,12 @@ export default class Cliente {
         this._email = email;
         
     }
+
+    getNome() {
+        return this._nome;
+    }
+
+    getEmail() {
+        return this._email;
+    }
 }

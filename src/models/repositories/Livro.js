@@ -18,9 +18,9 @@ export class Livro extends ILivro{
     }
 
     exibirDetalhes() {
-        return `Autor: ${this.autor}
-            \rTítulo: ${this.titulo},
-            \rPreço: R$ ${this.preco}\n`;
+        return `Autor: ${this.getAutor()}
+            \rTítulo: ${this.getLivro()},
+            \rPreço: R$ ${this.getPreco()}\n`;
     }
 
 }
@@ -32,7 +32,7 @@ export class Ebook extends Livro {
 
     }
 
-// refatorar esta função para o format de SET
+// refatorar esta função para o formato de SET
     setFormato() {
         const FORMATOS = ['EPUB', 'PDF'];
         if (this.formato == FORMATOS.find(this.formato)) {

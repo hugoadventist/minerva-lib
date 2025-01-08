@@ -1,9 +1,7 @@
-import Cliente from "./Cliente.js";
-
 export default class Pedido {
 
-    constructor() {
-        this.cliente = Cliente;
+    constructor(cliente) {
+        this.cliente = cliente;
         this.livros = [];
         this._dataPedido = new Date().toDateString();
 
@@ -11,10 +9,10 @@ export default class Pedido {
 
     adicionarLivro(livro) {
             this.livros.push(livro);
-            console.log("Livro adicionado com sucesso!");
+            console.log("Livro adicionado ao seu pedido com sucesso!");
         }
 
-    calcularTotal() {
-        
+    calcularTotal(precos) {
+                
     }
 }

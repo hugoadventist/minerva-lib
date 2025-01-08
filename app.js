@@ -1,5 +1,5 @@
 import readline from 'node:readline';
-import Livraria from './src/models/repositories/Livraria.js';
+import Livraria from './src/services/Livraria.js';
 import Pedido from './src/models/repositories/Pedido.js';
 import ILivro from './src/models/repositories/interfaces/ILivro.js';
 import { Ebook, Livro } from './src/models/repositories/Livro.js';
@@ -31,15 +31,19 @@ function tentar(){
 function main() {
     const novaLivraria = new Livraria();
     console.log(novaLivraria.adicionarLivro('um titulo','um autor', 2));
+    novaLivraria.adicionarLivro('who i am', 'lee', 99);
     console.log(novaLivraria.registrarCliente('seu zé','seuze@couldmail.com'));
-    console.log(novaLivraria.livrosDisponiveis);
-    novaLivraria.fazerPedido('seu zé','um titulo');
-    console.log(novaLivraria.getLivrosDisponiveis());
-    const novoPedido = new Pedido();
-    novoPedido.adicionarLivro('um titulo');
-    novoPedido.calcularTotal();
+    console.log("Lista de livros disponíveis")
+    console.table(novaLivraria.getLivrosDisponiveis());
+    console.log(novaLivraria.fazerPedido('seu zé', 'a volta dos que não foram', 'as tranças de um careaca'));
+    /*const titulosLivros = novaLivraria.getTituloLivro();
+    console.log(titulosLivros.next());
+    console.log(titulosLivros.next());
+
+
+/*    novoPedido.calcularTotal();
     console.log(novoPedido.cliente);
-/*
+
     const novoLivro = new Ebook('hoje','eu', 1,'ebook');
     console.log(`saída do novoLivro \n \r${novoLivro.exibirDetalhes()}`);
 
