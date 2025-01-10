@@ -1,3 +1,7 @@
+import Utils from "../../utils/functionUtils.js";
+
+const utils = new Utils();
+
 export default class Pedido {
 
     constructor(cliente) {
@@ -12,7 +16,9 @@ export default class Pedido {
         console.log(`O livro ${livro._titulo} foi adicionado com sucesso!`)
     }
 
-    calcularTotal(precos) {
+    calcularTotal() {
+        const precos = this._livros.map(obj => obj._preco);
+        return utils.arredondar(precos.reduce((acumulador, valorAtual) => acumulador + valorAtual,));
 
     }
 }

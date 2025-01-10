@@ -8,6 +8,14 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+function registrarLivro() {
+
+    rl.question("Qual o nome do livro?", (titulo) => {
+        console.log(`Você digitou o título do livro: ${titulo}`)
+    })
+    console.log("função registrarLivro() acionada.");
+}
+
 function tentar() {
 
     console.log(`Minerva Books: \n\n Boas vindas!!! \n\n
@@ -22,7 +30,9 @@ function tentar() {
     rl.on('line', (input) => {
         const entrada = input.trim(); // Remover espaços em branco extras
         const arrayOpcoes = {
+            1: registrarLivro(),
         }
+        return arrayOpcoes[entrada];
     });
 
 }
@@ -49,6 +59,7 @@ function main() {
         for (const livro of novoPedido._livros) {
             console.log(livro.exibirDetalhes());
         }
+        console.log(`O valor total do pedido é: R$ ${novoPedido.calcularTotal()}`)
     } catch (error) {
         throw new Error(`Erro ao fazer o pedido: ${error}`)
     }
