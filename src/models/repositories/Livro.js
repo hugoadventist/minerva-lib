@@ -1,7 +1,7 @@
 import ILivro from "./interfaces/ILivro.js";
 
-export class Livro extends ILivro{
-    constructor(titulo, autor, preco){
+export class Livro extends ILivro {
+    constructor(titulo, autor, preco) {
         super(titulo, autor, preco);
     }
 
@@ -20,19 +20,19 @@ export class Livro extends ILivro{
     exibirDetalhes() {
         return `Autor: ${this.getAutor()}
             \rTítulo: ${this.getLivro()},
-            \rPreço: R$ ${this.getPreco()}\n`;
+            \rPreço: R$ ${this.getPreco()}`;
     }
 
 }
 
 export class Ebook extends Livro {
     constructor(titulo, autor, preco, formato) {
-        super(titulo,autor, preco);
+        super(titulo, autor, preco);
         this._formato = formato;
 
     }
 
-// refatorar esta função para o formato de SET
+    // refatorar esta função para o formato de SET
     setFormato() {
         const FORMATOS = ['EPUB', 'PDF'];
         if (this.formato == FORMATOS.find(this.formato)) {
@@ -41,22 +41,22 @@ export class Ebook extends Livro {
             console.log("Opção de formato inválida, favor escolher a opção correta!");
 
         }
-        }
-    
-    exibirDetalhes () {
-        return `${super.exibirDetalhes()}
-        \r Formato: ${this._formato}`;
     }
-    
+
+    exibirDetalhes() {
+        return `${super.exibirDetalhes()}
+        \rFormato: ${this._formato}`;
+    }
+
 
 }
 
 export class LivroFisico extends Livro {
     constructor(titulo, autor, preco, numeroPaginas) {
-        super(titulo,autor, preco);
+        super(titulo, autor, preco);
         this._numeroPaginas = numeroPaginas;
 
-        
+
     }
 
     exibirDetalhes() {

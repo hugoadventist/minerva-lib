@@ -2,17 +2,17 @@ export default class Pedido {
 
     constructor(cliente) {
         this.cliente = cliente;
-        this.livros = [];
+        this._livros = [];
         this._dataPedido = new Date().toDateString();
 
     }
 
     adicionarLivro(livro) {
-            this.livros.push(livro);
-            console.log("Livro adicionado ao seu pedido com sucesso!");
-        }
+        this._livros.push(livro);
+        console.log(`O livro ${livro._titulo} foi adicionado com sucesso!`)
+    }
 
     calcularTotal(precos) {
-                
+
     }
 }
