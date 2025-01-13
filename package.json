@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest",
+    "test": "node --test ./__tests__/*.test.*",
     "dev": "node app.js"
   },
   "keywords": [],

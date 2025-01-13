@@ -40,7 +40,7 @@ function tentar() {
 function main() {
     const novaLivraria = new Livraria();
 
-    const novoEbook = new Ebook("Eu, robô", "Isaac Asimov", 99.9, "PDF");
+    const novoEbook = new Ebook("Eu, robô", "Isaac Asimov", 99.9, "WORD");
     const novoLivroFisico = new LivroFisico("Sertões", "Graciliano Ramos", 20.90, "100");
 
     // Adicionando livros à livraria

@@ -1,4 +1,7 @@
 import ILivro from "./interfaces/ILivro.js";
+import Utils from "../../utils/functionUtils.js";
+
+const utils = new Utils();
 
 export class Livro extends ILivro {
     constructor(titulo, autor, preco) {
@@ -28,19 +31,13 @@ export class Livro extends ILivro {
 export class Ebook extends Livro {
     constructor(titulo, autor, preco, formato) {
         super(titulo, autor, preco);
-        this._formato = formato;
+        this._formato = utils.verificarFormato(formato);
 
     }
 
     // refatorar esta função para o formato de SET
-    setFormato() {
-        const FORMATOS = ['EPUB', 'PDF'];
-        if (this.formato == FORMATOS.find(this.formato)) {
-            return this._formato;
-        } else {
-            console.log("Opção de formato inválida, favor escolher a opção correta!");
-
-        }
+    getFormat() {
+        return this._formato;
     }
 
     exibirDetalhes() {
